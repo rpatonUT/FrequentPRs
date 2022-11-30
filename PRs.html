@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Frequent Problem Reports</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Frequent Problem Report Users</h2>
+    <form>
+        <div class="row">
+            <div class="col-25">
+              <label for="time">Time in Started</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="time" name="time">
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="tasknum">Task Number</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="tasknum" name="tasknum">
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="reason">Reason</label>
+            </div>
+            <div class="col-75">
+              <select id="reason" name="Reason">
+                <option value="long">Too Long</option>
+                <option value="confusing">Confusing</option>
+                <option value="interrupted">Interuppted</option>
+                <option value="taski">Task Issue</option>
+                <option value="techi">Tech Issue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="reason">Explanation Given</label>
+            </div>
+            <div class="col-75">
+              <select id="explanation" name="Explanation">
+                <option value="yes">Yes</option>
+                <option value="no">None</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="avgtime">Average Test Time</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="avgtime" name="avgtime">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="avgtasktime">Average Time to Task</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="avgtasktime" name="avgtasktime">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="reason">Other PRs</label>
+            </div>
+            <div class="col-75">
+              <select id="OtherPR" name="OtherPR">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="unrelated">Unrelated</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="reason">Other Restarts</label>
+            </div>
+            <div class="col-75">
+              <select id="restarts" name="Restarts">
+                <option value="many">Many</option>
+                <option value="few">Few</option>
+                <option value="none">None</option>
+              </select>
+            </div>
+          </div>
+    </form>
+    
+    <button class="submit">Submit</button>
+ 
+    <script src="main.js"></script>
+</body>
+</html>
