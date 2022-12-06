@@ -41,7 +41,7 @@
           </div>
           <div class="row">
             <div class="col-25">
-              <label for="reason">Explanation Given</label>
+              <label for="explanation">Explanation Given</label>
             </div>
             <div class="col-75">
               <select id="explanation" name="Explanation">
@@ -72,7 +72,7 @@
               <label for="reason">Other PRs</label>
             </div>
             <div class="col-75">
-              <select id="OtherPR" name="OtherPR">
+              <select id="otherPR" name="OtherPR">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
                 <option value="unrelated">Unrelated</option>
@@ -93,7 +93,9 @@
           </div>
     </form>
     
-    <button class="submit">Submit</button>
+    <button class="submitb" id="submitb">Submit</button>
+    <span class="dot" id="circ"></span>
+    <p id="finalScore">Score: </p>
  
     <script src="main.js"></script>
 </body>

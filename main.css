@@ -56,10 +56,10 @@
     clear: both;
   }
 
-  .submit {
-    width: 8%;
+  .submitb {
+    width: 12%;
     margin-top: 3%;
-    margin-left: 11%;
+    margin-left: 10%;
     color: black;
     background-color:white;
     padding: 12px 20px;
@@ -68,5 +68,26 @@
     border: 1.5px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+  }
+
+
+  .dot {
+    height: 250px;
+    width: 250px;
+    background-color: rgb(169, 45, 45);
+    border-radius: 50%;
+    /* display: inline-block; */
+    display: none;
+    margin-left: 30%;
+    margin-top: -50%;
+    position: fixed;
+    
+  }
+
+  #finalScore {
+    display: none;
+    margin-left: 35%;
+    margin-top: -35%;
+    position: fixed;
   }
   
