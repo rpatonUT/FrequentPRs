@@ -1,7 +1,8 @@
-var decision;
-var info = [];
-var score;
-var firstclick = true;
+let decision;
+let info = [];
+let score;
+let firstclick = true;
+let color;
 
 /**
  * info contains all information from the form
@@ -30,18 +31,21 @@ function getInfo(){
 // Shows circle in decision colour
 submitb.onclick = function(){
     if (!firstclick){
-        document.getElementById('finalScore').innerHTML = "Score: ";
+        console.log(1);
+        document.getElementById('finalScore').textContent = "Score: ";
+        info = [];
     }
-
     getInfo();
     score = 100;
     calculateScore();
-    makeDecision();
-    console.log(decision);
-    document.getElementById('circ').style.backgroundColor = decision;
-    document.getElementById('circ').style.display = 'inline-block';
+    color = makeDecision();
+    console.log(score);
+    // add class with color 
+    document.getElementById('circ').classList.add(color);
+    document.querySelectorAll('.displayDec').forEach(element => {
+        element.style.visibility = 'visible';
+        });
     document.getElementById('finalScore').textContent += score;
-    document.getElementById('finalScore').style.display = 'inline-block';
     firstclick = false;
 }
 
@@ -66,15 +70,15 @@ function calculateScore(){
     
     else {
         // time in started
-        if (info[0] < 8){
-            score -= 10
+        if (info[0] < 10){
+            score -= 10;
         }
 
         // task number - NB not doing a check for?
 
         // explanation given
         if (info[3] == "no"){
-            score -= 10
+            score -= 10;
         }
 
         // average test time for other partcipants
@@ -110,16 +114,13 @@ function calculateScore(){
 
 // fills colour based on score
 function makeDecision(){
-    console.log(score)
     switch (true){
         case score > 66:
-            decision = "green";
-            break;
+            return "green";
         case score > 33:
-            decision = "yellow";
-            break;
+            return "yellow";
         default:
-            decision = "red";
+            return "red";
     }
 }
 
